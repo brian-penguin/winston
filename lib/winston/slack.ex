@@ -6,8 +6,8 @@ defmodule Winston.Slack do
   def start_link, do: start_link(@token, [])
 
   def handle_message(message = %{type: "message", text: text}, slack, state) do
-    if text == "<@#{slack.me.id}>: hello" do
-      Slack.send_message("Hello!", message.channel, slack)
+    if String.contains?(text, slack.me.id) do 
+      Slack.send_message("I only know this one message", message.channel, slack)
     end
 
     {:ok, state}
