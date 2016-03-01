@@ -1,3 +1,6 @@
+@moduledoc """
+handles incoming messages from slack
+"""
 defmodule Winston.Slack do
   use Slack
 

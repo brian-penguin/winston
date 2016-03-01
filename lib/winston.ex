@@ -1,3 +1,6 @@
+@moduledoc"""
+A slackbot in elixir for learning elixir!
+"""
 defmodule Winston do
   use Application
 

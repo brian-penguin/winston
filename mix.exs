@@ -16,7 +16,10 @@ defmodule Winston.Mixfile do
   end
 
   defp deps do
-    [{:slack, "~> 0.4.1"},
-     {:websocket_client, git: "https://github.com/jeremyong/websocket_client"}]
+    [
+      {:slack, "~> 0.4.1"},
+      {:websocket_client, git: "https://github.com/jeremyong/websocket_client"},
+      {:credo, "~> 0.3", only: [:dev, :test]}
+    ]
   end
 end
