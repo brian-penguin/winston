@@ -1,7 +1,7 @@
-@moduledoc """
-handles incoming messages from slack
-"""
 defmodule Winston.Slack do
+  @moduledoc """
+  handles incoming messages from slack
+  """
   use Slack
 
   @token Application.get_env(:winston, __MODULE__)[:token]

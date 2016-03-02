@@ -1,7 +1,7 @@
-@moduledoc"""
-A slackbot in elixir for learning elixir!
-"""
 defmodule Winston do
+  @moduledoc"""
+  A slackbot in elixir for learning elixir!
+  """
   use Application
 
   def start(_type, _args) do
