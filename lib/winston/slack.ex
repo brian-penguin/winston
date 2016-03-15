@@ -10,7 +10,7 @@ defmodule Winston.Slack do
 
   def handle_message(message = %{type: "message", text: text}, slack, state) do
     if String.contains?(text, slack.me.id) do 
-      Slack.send_message("I only know this one message", message.channel, slack)
+      Slack.send_message("I heard you said: #{text}", message.channel, slack)
     end
 
     {:ok, state}
